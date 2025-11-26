@@ -5,12 +5,16 @@ using namespace std;
 bool prim(int szam)
 {
     if(szam < 2)
+    {
         return false;
+    }
 
     for(int i = 2; i * i <= szam; i++)
     {
         if(szam % i == 0)
+        {
             return false;
+        }
     }
     return true;
 }
