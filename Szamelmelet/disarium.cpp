@@ -2,24 +2,17 @@
 
 using namespace std;
 
-int utolsoSzamjegy(int szam)
-{
-    return szam % 10;
-}
-
-int levagUtolsoSzamjegy(int szam)
-{
-    return szam / 10;
-}
-
 int szamjegySzam(int szam)
 {
-    if(szam == 0) return 1;
+    if(szam == 0)
+    {
+        return 1;
+    }
     int db = 0;
     while(szam != 0)
     {
-        szam = levagUtolsoSzamjegy(szam);
         db++;
+        szam = szam / 10;
     }
     return db;
 }
@@ -31,12 +24,12 @@ int hatvany(int a, int k)
     {
         if(k % 2 == 0)
         {
-            a *= a;
-            k /= 2;
+            a = a * a;
+            k = k / 2;
         }
         else
         {
-            szorzat *= a;
+            szorzat = szorzat * a;
             k--;
         }
     }
@@ -50,9 +43,9 @@ bool disarium(int szam)
     int k = szamjegySzam(szam);
     while(szam != 0)
     {
-        ossz += hatvany(utolsoSzamjegy(szam), k);
-        szam = levagUtolsoSzamjegy(szam);
+        ossz = ossz + hatvany(szam % 10, k);
         k--;
+        szam = szam / 10;
     }
     return ossz == eredeti;
 }
