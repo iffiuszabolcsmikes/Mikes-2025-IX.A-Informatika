@@ -2,7 +2,7 @@
 
 using namespace std;
 
-bool primSzam(int szam)
+bool prim(int szam)
 {
     if(szam < 2)
         return false;
@@ -19,8 +19,10 @@ int main()
 {
     for(int i = 0; i < 10000; i++)
     {
-        if(primSzam(i))
+        if(prim(i))
+        {
             cout << i << endl;
+        }
     }
     return 0;
 }
