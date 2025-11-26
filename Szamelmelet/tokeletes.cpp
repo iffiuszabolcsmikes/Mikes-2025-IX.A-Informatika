@@ -25,7 +25,9 @@ int main()
     for(int i = 0; i < 100000000; i++)
     {
         if(tokeletes(i))
+        {
             cout << i << endl;
+        }
     }
 
     return 0;
