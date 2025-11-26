@@ -14,7 +14,10 @@ int levagUtolsoSzamjegy(int szam)
 
 int szamjegySzam(int szam)
 {
-    if(szam == 0) return 1;
+    if(szam == 0)
+    {
+        return 1;
+    }
     int db = 0;
     while(szam != 0)
     {
@@ -67,3 +70,4 @@ int main()
     }
     return 0;
 }
+
