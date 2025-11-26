@@ -22,7 +22,7 @@ int szamjegySzam(int szam)
     while(szam != 0)
     {
         db++;
-        szam = levagUtolsoSzamjegy(szam);
+        szam = szam / 10;
     }
     return db;
 }
@@ -33,8 +33,8 @@ int szamjegyOssz(int szam)
     int ossz = 0;
     while(szam != 0)
     {
-        ossz += utolsoSzamjegy(szam);
-        szam = levagUtolsoSzamjegy(szam);
+        ossz = ossz + szam % 10;
+        szam = szam / 10;
     }
     return ossz;
 }
@@ -45,12 +45,12 @@ int legkisebbSzamjegy(int szam)
     int minszj = 9;
     while(szam != 0)
     {
-        int uszj = utolsoSzamjegy(szam);
+        int uszj = szam % 10;
         if(uszj < minszj)
         {
             minszj = uszj;
         }
-        szam = levagUtolsoSzamjegy(szam);
+        szam = szam / 10;
     }
     return minszj;
 }
@@ -61,12 +61,12 @@ int legnagyobbSzamjegy(int szam)
     int maxszj = 0;
     while(szam != 0)
     {
-        int uszj = utolsoSzamjegy(szam);
+        int uszj = szam % 10;
         if(uszj > maxszj)
         {
             maxszj = uszj;
         }
-        szam = levagUtolsoSzamjegy(szam);
+        szam = szam / 10;
     }
     return maxszj;
 }
@@ -76,7 +76,7 @@ int elsoSzamjegy(int szam)
 {
     while(szam > 9)
     {
-        szam = levagUtolsoSzamjegy(szam);
+        szam = szam / 10;
     }
     return szam;
 }
@@ -87,8 +87,8 @@ int megfordit(int szam)
     int forditott = 0;
     while(szam != 0)
     {
-        forditott = forditott * 10 + utolsoSzamjegy(szam);
-        szam = levagUtolsoSzamjegy(szam);
+        forditott = forditott * 10 + szam % 10;
+        szam = szam / 10;
     }
     return forditott;
 }
