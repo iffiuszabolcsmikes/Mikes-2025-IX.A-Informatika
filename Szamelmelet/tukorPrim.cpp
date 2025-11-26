@@ -19,22 +19,26 @@ bool tukorSzam(int szam)
     return szam == megfordit(szam);
 }
 
-bool primSzam(int szam)
+bool prim(int szam)
 {
     if(szam < 2)
+    {
         return false;
+    }
 
     for(int i = 2; i * i <= szam; i++)
     {
         if(szam % i == 0)
+        {
             return false;
+        }
     }
     return true;
 }
 
 bool tukorPrim(int szam)
 {
-    return tukorSzam(szam) && primSzam(szam);
+    return tukorSzam(szam) && prim(szam);
 }
 
 int main()
@@ -49,4 +53,5 @@ int main()
 
     return 0;
 }
+
 
