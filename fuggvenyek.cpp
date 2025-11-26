@@ -41,12 +41,12 @@ int hatvany(int a, int k)
     {
         if(k % 2 == 0)
         {
-            a *= a;
-            k /= 2;
+            a = a * a;
+            k = k / 2;
         }
         else
         {
-            szorzat *= a;
+            szorzat = szorzat * a;
             k--;
         }
     }
@@ -80,3 +80,4 @@ int main()
     }
     return 0;
 }
+
