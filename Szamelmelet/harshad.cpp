@@ -2,23 +2,13 @@
 
 using namespace std;
 
-int utolsoSzamjegy(int szam)
-{
-    return szam % 10;
-}
-
-int levagUtolsoSzamjegy(int szam)
-{
-    return szam / 10;
-}
-
 int szamjegyOssz(int szam)
 {
     int ossz = 0;
     while(szam != 0)
     {
-        ossz = ossz + utolsoSzamjegy(szam);
-        szam = levagUtolsoSzamjegy(szam);
+        ossz = ossz + szam % 10;
+        szam = szam / 10;
     }
     return ossz;
 }
