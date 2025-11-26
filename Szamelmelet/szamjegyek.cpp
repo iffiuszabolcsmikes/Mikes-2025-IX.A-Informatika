@@ -45,10 +45,9 @@ int legkisebbSzamjegy(int szam)
     int minszj = 9;
     while(szam != 0)
     {
-        int uszj = szam % 10;
-        if(uszj < minszj)
+        if(szam % 10 < minszj)
         {
-            minszj = uszj;
+            minszj = szam % 10;
         }
         szam = szam / 10;
     }
@@ -61,10 +60,9 @@ int legnagyobbSzamjegy(int szam)
     int maxszj = 0;
     while(szam != 0)
     {
-        int uszj = szam % 10;
-        if(uszj > maxszj)
+        if(szam % 10 > maxszj)
         {
-            maxszj = uszj;
+            maxszj = szam % 10;
         }
         szam = szam / 10;
     }
