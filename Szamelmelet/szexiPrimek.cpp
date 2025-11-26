@@ -23,7 +23,7 @@ int main()
 {
     for(int i = 0; i < 10000; i++)
     {
-        if(primSzam(i) && primSzam(i + 6))
+        if(prim(i) && prim(i + 6))
         {
             cout << i << " " << i + 6 << endl;
         }
