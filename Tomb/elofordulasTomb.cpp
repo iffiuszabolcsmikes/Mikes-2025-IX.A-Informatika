@@ -153,10 +153,10 @@ int main()
     int n = 9;
     feltolt(tomb, n);
     kiir(tomb, n);
-    kiirTobbszorElofordulok(tomb, n);
     kiirElofordulas(tomb, n);
-    cout<< "Legtobbszor elofordulo elem " << legtobszorEloforduloElem(tomb, n) << endl;
-    cout<< "Legkissebb legelso elem " << legelsoLegkissebb(tomb, n) << endl;
-    cout<< "Legnagyobb legutolso elem " << legtobszorEloforduloElem(tomb, n) << endl;
+    kiirTobbszorElofordulok(tomb, n);
+    cout<< "Legtobbszor elofordulo elem: " << legtobszorEloforduloElem(tomb, n) << endl;
+    cout<< "Legelso legkissebb  elem: " << legelsoLegkissebb(tomb, n) << endl;
+    cout<< "Legutolso legnagyobb elem: " << legtobszorEloforduloElem(tomb, n) << endl;
     return 0;
 }
