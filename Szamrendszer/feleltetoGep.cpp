@@ -96,16 +96,8 @@ int atalakit_10_n(int x10, int n)
 }
 int atalakit_n_m(int xn, int n, int m)
 {
-    int xm = 0;
-    int helyiErtek = 1;
-    while(xn != 0)
-    {
-        int usz = xn % 10;  //utolso szamjegy
-        xm +=  usz * helyiErtek;
-        helyiErtek *= n; //helyiErtekt novelem a kovetkezo kitevore
-        xn /= 10; //levagjuk az utolso szamjegyet
-    }
-    return xm;
+    int x10 = atalakit_n_10(xn, n);
+    return atalakit_10_n(x10, m);
 }
 
 int veletlenSzam(int kezd, int veg)
