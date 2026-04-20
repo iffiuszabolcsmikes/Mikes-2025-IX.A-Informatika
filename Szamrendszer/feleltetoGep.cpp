@@ -196,7 +196,7 @@ int main()
 
     int n;
     n = veletlenSzam(3, 9);
-    while(n == 4 || n == 8);
+    while(n == 4 || n == 8)
         n = veletlenSzam(3, 9);
     atalakitosFeladat(10, n);
 
