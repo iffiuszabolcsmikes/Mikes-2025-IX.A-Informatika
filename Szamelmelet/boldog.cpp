@@ -12,7 +12,8 @@ int szamjegyekNegyzetOsszege(int szam)
     return ossz;
 }
 
-bool boldog(int szam) {
+bool boldog(int szam)
+{
     while(szam != 1 && szam != 4)
     {
         szam = szamjegyekNegyzetOsszege(szam);
@@ -20,7 +21,8 @@ bool boldog(int szam) {
     return szam == 1;
 }
 
-int main() {
+int main()
+{
     for(int i = 1; i < 100; i++)
     {
         if(boldog(i))
