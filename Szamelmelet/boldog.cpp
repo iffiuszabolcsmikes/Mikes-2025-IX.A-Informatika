@@ -23,6 +23,7 @@ bool boldog(int szam)
 
 int main()
 {
+    cout << "Boldog szamok: " << endl;
     for(int i = 1; i < 100; i++)
     {
         if(boldog(i))
